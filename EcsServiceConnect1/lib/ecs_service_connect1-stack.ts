@@ -545,6 +545,7 @@ export class EcsServiceConnect1Stack extends cdk.Stack {
       },
       serviceConnectConfiguration: {
         enabled: true,
+        namespace: 'yelb-ns1',
         services: [
           {
             portName: 'postgres-db',
@@ -600,6 +601,7 @@ export class EcsServiceConnect1Stack extends cdk.Stack {
       },
       serviceConnectConfiguration: {
         enabled: true,
+        namespace: 'yelb-ns1',
         services: [
           {
             portName: 'redis-server',
@@ -643,6 +645,7 @@ export class EcsServiceConnect1Stack extends cdk.Stack {
       },
       serviceConnectConfiguration: {
         enabled: true,
+        namespace: 'yelb-ns1',
         services: [
           {
             portName: 'app-server',
@@ -695,6 +698,7 @@ export class EcsServiceConnect1Stack extends cdk.Stack {
       ],
       serviceConnectConfiguration: {
         enabled: true,
+        namespace: 'yelb-ns1',
         services: [
           {
             portName: 'app-ui',
