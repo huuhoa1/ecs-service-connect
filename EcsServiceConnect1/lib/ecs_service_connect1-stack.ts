@@ -213,6 +213,13 @@ export class EcsServiceConnect1Stack extends cdk.Stack {
           name: 'app-server',
           essential: true,
           image: 'mreferre/yelb-appserver:0.7',
+          environment: [
+            { name: 'APP_PORT', value: '4567' },
+            { name: 'YELB_DB_SERVER', value: 'yelb-db' },
+            { name: 'YELB_DB_SERVER_PORT', value: '5432' },
+            { name: 'YELB_REDIS_SERVER', value: 'redis-server' },
+            { name: 'YELB_REDIS_SERVER_PORT', value: '6379' },
+          ],
           portMappings: [
             {
               containerPort: 4567,
